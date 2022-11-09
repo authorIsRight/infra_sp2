@@ -51,12 +51,11 @@ class Genre(models.Model):
         return self.name
 
 
-
 class Title(models.Model):
     """Модель произведения."""
 
     name = models.CharField(
-        verbose_name="Название произведения", 
+        verbose_name="Название произведения",
         max_length=256,
         blank=False,
     )
@@ -106,8 +105,6 @@ class GenreTitle(models.Model):
         return f'{self.genre} {self.title}'
 
 
-
-
 class Review(models.Model):
     title = models.ForeignKey(Title, on_delete=models.CASCADE,
                               related_name='reviews')
@@ -148,4 +145,3 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.text
-
