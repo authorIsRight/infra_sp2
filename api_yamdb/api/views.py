@@ -4,9 +4,8 @@ from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, mixins, status, viewsets
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.decorators import api_view, action
-from rest_framework.permissions import (IsAuthenticated,
+from rest_framework.permissions import (
                                         IsAuthenticatedOrReadOnly)
-from rest_framework.response import Response
 
 from reviews.models import Category, Genre, Title
 from api.paginator import CommentPagination
@@ -15,8 +14,6 @@ from api.serializers import (CategoriesSerializer,
                              CommentSerializer, GenresSerializer,
                              ReviewSerializer,
                              TitlesSerializer, TitlesViewSerializer)
-
-from rest_framework.pagination import LimitOffsetPagination
 
 from users.permissions import (IsAdminOrReadOnly,
                                IsAdminModeratorAuthorOrReadOnly)
