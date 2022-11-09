@@ -3,8 +3,7 @@ from django.db.models import Avg
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters, mixins, viewsets
 from rest_framework.pagination import PageNumberPagination
-from rest_framework.permissions import (
-                                        IsAuthenticatedOrReadOnly)
+from rest_framework.permissions import IsAuthenticatedOrReadOnly
 
 from reviews.models import Category, Genre, Title
 from api.paginator import CommentPagination
